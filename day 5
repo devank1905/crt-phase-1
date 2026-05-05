@@ -38,3 +38,105 @@ int main()
     cout<<areaofrect;
     return 0;
 }
+
+//program 4.1
+//types of functions
+//no argument and no return type
+
+#include<iostream>
+using namespace std;
+
+void doorbell(){
+    cout<<"ting tong..";
+}
+int main(){
+    doorbell();
+    return 0;
+}
+
+//4.2 argument , no return type
+#include<iostream>
+using namespace std;
+
+void sendtext(string message){
+    cout<<message;
+}
+int main(){
+    sendtext("BJP wons..");
+    return 0 ;
+}
+
+//4.3 no argument , return type
+
+#include<iostream>
+using namespace std;
+int ticketnumber(){
+    return 101;
+}
+int main (){
+    cout<<ticketnumber();
+    return 0;
+}
+
+//4.4 argument , return type
+
+#include<iostream>
+using namespace std;
+
+int currencyconversion (int amountInUSD){
+    return amountInUSD/100;
+}
+
+ int main (){
+     cout<<currencyconversion(10000);
+     return 0;
+ }
+
+#include <iostream>
+using namespace std;
+
+int add (int a, int b){
+return a+b;
+}
+
+int add (int a, int b, int c){
+return a+b+c;
+}
+
+int add (int a, int b, int c, int d){
+return a+b+c+d;
+}
+
+double add (double a, double b){
+return a+b;
+}
+
+int main()
+{
+    cout<<add(2,5)<<"\n";
+    
+    cout<<add(2,5,6)<<"\n";
+    
+    cout<<add(2,5,8,2)<<"\n";
+    
+    cout<<add(2.8,5.3)<<"\n";
+    return 0;
+}
+
+// Problem 7
+// addition of 2 numbers using Pointers
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    cin >> a;
+    cin >> b;
+    
+    int *ptr1 = &a;
+    int *ptr2 = &b;
+    
+    int sum =  *ptr1 + *ptr2;
+    cout << sum;
+}
