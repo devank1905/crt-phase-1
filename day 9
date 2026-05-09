@@ -1,0 +1,89 @@
+#include <iostream>
+using namespace std;
+
+class appliance{
+       public:
+       virtual void TurnOn(){
+           cout<<"appliance is starting up...."<<"\n";
+       }
+       virtual void work() = 0;
+    };
+    
+class fan : public appliance{
+        public:
+        void TurnOn(){
+            cout<<"Fan blades are moving slowly .."<<"\n";
+        }
+        void work(){
+            cout<<"Fan is giving me cool air ..."<<"\n";
+        }
+    };
+    
+class toaster : public appliance{
+        void work() override {
+            cout << "Toaster is heating up";
+        }
+    };
+    
+
+int main()
+{
+    appliance *ka;
+    
+    fan f;
+    toaster t;
+    
+    ka =&f;
+    ka->TurnOn();
+    ka->work();
+    
+    cout<< "___" <<endl;
+    
+    ka =&t;
+    ka->TurnOn();
+    ka->work();
+    
+    return 0;
+}
+
+
+#include<iostream>
+using namespace std;
+
+
+class rectangle{
+  public:
+  int length;
+  int width;
+  
+  rectangle(){
+      length  =1;
+      width=1;
+  }
+  
+  rectangle(int side){
+      length=side;
+      width=side;
+  }
+  
+  rectangle(int side1 , int side2){
+      length=side1;
+      width=side2;
+  }
+  void showarea(){
+      cout<<length*width<<"\n";
+  }
+};
+
+int main(){
+    rectangle r1;
+    rectangle r2(5);
+    rectangle r3(4,6);
+    
+    r1.showarea();
+    r2.showarea();
+    r3.showarea();
+    return 0;
+}
+
+
